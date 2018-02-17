@@ -28,5 +28,15 @@ public:
 	where the crosshair intersect the world*/
 	void AimTowardsCrosshair();
 
+private:
+	// Return an OUT paramete, true if hit landscape
+	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
 
+
+	UPROPERTY(EditAnywhere)
+		float CrosshairXLocation = 0.5f;
+
+	UPROPERTY(EditAnywhere)
+		float CrosshairYLocation = 0.33333f;
+		
 };
